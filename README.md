@@ -1,1 +1,1 @@
-# globus
+Globus training session

@@ -1,7 +1,7 @@
 package Figure;
 
 
-public abstract class Figure implements Calculable {
+abstract public class Figure implements Calculable {
 
     private final String mName;
     private Color mColor;

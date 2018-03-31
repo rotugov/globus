@@ -4,6 +4,7 @@ import Figure.*;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -19,10 +20,30 @@ public class ConfigReader {
         mFilename = filename;
     }
 
-    public ArrayList<Figure> getFiguresFromConfig() {
+    private static Figure getFigure(String figure, Color color, double first, double second) throws Exception {
+        switch (figure) {
+            case "Triangle":
+                return new Triangle(color, first, second);
+            default:
+                throw new Exception("Wrong config!");
+        }
+    }
+
+    private static Figure getFigure(String figure, Color color, double first) throws Exception {
+        switch (figure) {
+            case "Circle":
+                return new Circle(color, first);
+            case "Square":
+                return new Square(color, first);
+            default:
+                throw new Exception("Wrong config!");
+        }
+    }
+
+    public List<Figure> getFiguresFromConfig() {
 
         Pattern r = Pattern.compile(PATTERN);
-        ArrayList<Figure> arrayListOfFigures = new ArrayList<>();
+        List<Figure> arrayListOfFigures = new ArrayList<>();
         String figure;
         Color color;
         Integer first, second;
@@ -60,26 +81,4 @@ public class ConfigReader {
 
         return arrayListOfFigures;
     }
-
-    private static Figure getFigure(String figure, Color color, double first, double second) throws Exception {
-        switch (figure) {
-            case "Triangle":
-                return new Triangle(color, first, second);
-            default:
-                throw new Exception("Wrong config!");
-        }
-    }
-
-    private static Figure getFigure(String figure, Color color, double first) throws Exception {
-        switch (figure) {
-            case "Circle":
-                return new Circle(color, first);
-            case "Square":
-                return new Square(color, first);
-            default:
-                throw new Exception("Wrong config!");
-        }
-    }
-
-
 }

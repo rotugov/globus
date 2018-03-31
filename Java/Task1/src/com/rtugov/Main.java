@@ -14,11 +14,16 @@ public class Main {
             a = scanner.nextFloat();
             System.out.print("Enter a number: b = ");
             b = scanner.nextFloat();
+
+            if (b == 0) throw new ArithmeticException();
+        } catch (InputMismatchException e) {
+            System.out.println("A number was expected!");
+            System.exit(1);
+        } catch (ArithmeticException e) {
+            System.out.println("You can't enter 0 value as a second argument. It might cause ZeroDivision Exception!");
+            System.exit(1);
         }
-        catch (InputMismatchException e) {
-            System.out.println("An integer number was expected! Crash!");
-            return;
-        }
+
 
         System.out.println("Arithmetical operations:");
         System.out.println("(a + b): " + (a + b));
@@ -26,5 +31,6 @@ public class Main {
         System.out.println("(a * b): " + (a * b));
         System.out.println("(a / b): " + (a / b));
         System.out.println("(a % b): " + (a % b));
+
     }
 }

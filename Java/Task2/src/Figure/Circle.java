@@ -10,6 +10,7 @@ public class Circle extends Figure {
         mRadius = radius;
     }
 
+    @Override
     public double square() {
         return Math.PI * mRadius * mRadius;
     }

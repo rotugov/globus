@@ -16,10 +16,11 @@ public class Triangle extends Figure {
         return mBase;
     }
 
-    public double getHeight(double h) {
+    public double getHeight() {
         return mHeight;
     }
 
+    @Override
     public double square() {
         return 0.5 * mBase * mHeight;
     }

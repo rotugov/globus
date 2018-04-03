@@ -34,6 +34,7 @@ abstract public class Figure implements Calculable {
                 '}';
     }
 
+    // It was hard to find a good solution for my custom hash.
     @Override
     public int hashCode() {
         return Objects.hash(mName, mColor, this.square());

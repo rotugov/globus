@@ -26,7 +26,7 @@ public class Main {
         }
 
         // Sort it in another way.
-        // Since TreeMap is always sorted by giving Comparator we could use it to sort HashMap.
+        // Since TreeMap is always sorted by given Comparator we could use it to sort HashMap.
         Map<Figure, Double> treeMapOfFigures = new TreeMap<>(new FiguresComparator());
         treeMapOfFigures.putAll(figuresMappedToSquares);
 

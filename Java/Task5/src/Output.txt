@@ -1,0 +1,35 @@
++ /Users/user/Dev/Android/globus/Java/Task4
+ + .idea
+ + out
+ + Output.txt
+ + src
+ + Task4.iml
++ /Users/user/Dev/Android/globus/Java/Task4/.idea
+ + description.html
+ + misc.xml
+ + modules.xml
+ + project-template.xml
+ + uiDesigner.xml
+ + workspace.xml
++ /Users/user/Dev/Android/globus/Java/Task4/out
+ + production
++ /Users/user/Dev/Android/globus/Java/Task4/out/production
+ + Task4
++ /Users/user/Dev/Android/globus/Java/Task4/out/production/Task4
+ + Output.txt
+ + README.md
+ + Tree.class
+ + Utils
++ /Users/user/Dev/Android/globus/Java/Task4/out/production/Task4/Utils
+ + Cli.class
+ + FileUtils.class
+ + Travers.class
++ /Users/user/Dev/Android/globus/Java/Task4/src
+ + Output.txt
+ + README.md
+ + Tree.java
+ + Utils
++ /Users/user/Dev/Android/globus/Java/Task4/src/Utils
+ + Cli.java
+ + FileUtils.java
+ + Travers.java
